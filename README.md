@@ -36,12 +36,51 @@ To simulate ingestion of external telemetry, a full Azure Monitor ingestion pipe
   
 This architecture reflects a real-world ingestion pipeline used to onboard third-party data sources into Sentinel (Figures 8–10, 18).
 
+<img width="1324" height="684" alt="8 creating data collection end point" src="https://github.com/user-attachments/assets/bfdbec03-e651-45ca-b9ef-d7a6f44b8863" />
+
+*Figure 5: Dashboard Alerts*
+
+<img width="852" height="886" alt="9" src="https://github.com/user-attachments/assets/c5720b35-daea-4f1d-9784-331c3611a32e" />
+
+*Figure 6: Dashboard Alerts*
+
+<img width="989" height="898" alt="10" src="https://github.com/user-attachments/assets/5e66becd-afc0-4e7f-a69b-6d4e565cbe1b" />
+
+*Figure 7: Dashboard Alerts*
+
+<img width="1919" height="590" alt="18 both logs ingested Resource Group" src="https://github.com/user-attachments/assets/05d77b5c-5601-4733-8738-bfca75be5928" />
+
+*Figure 8: Dashboard Alerts*
+
 The resource group confirms successful deployment of all required components:
 - Log Analytics Workspace
 - Microsoft Sentinel solution
 - Data Collection Rule
-- Data Collection Endpoint
-(Figure 18)
+- Data Collection Endpoint (Figure 18)
+
+**Cisco Stealthwatch Integration (CiscoStealthwatch_CL)**
+
+A custom table (CiscoStealthwatch_CL) was created to simulate ingestion of Cisco Stealthwatch network telemetry (Figures 7, 10, 14).
+
+During ingestion configuration:
+
+A JSON sample file (CiscoStealthwatch.json) was uploaded to define schema
+A transformation rule was implemented to normalize timestamps:
+
+*| extend TimeGenerated = todatetime(EventTime)*
+(Figures 12, 14)
+
+Initial ingestion errors highlighted a missing TimeGenerated field (Figure 11).
+This was resolved by mapping the existing EventTime field to TimeGenerated, ensuring compatibility with Sentinel’s time-based query engine (Figures 12–13).
+
+Final schema validation using KQL confirmed the table structure was correctly defined, including fields such as:
+
+EventTime
+HostIP / HostName
+SeverityLevel
+SyslogMessage
+ProcessName
+(Figure 21)
 
 
 
