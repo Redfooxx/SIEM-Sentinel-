@@ -62,13 +62,26 @@ The resource group confirms successful deployment of all required components:
 
 A custom table (CiscoStealthwatch_CL) was created to simulate ingestion of Cisco Stealthwatch network telemetry (Figures 7, 10, 14).
 
+<img width="1886" height="895" alt="7" src="https://github.com/user-attachments/assets/e5effa28-5ac9-45c0-91ec-9700d5c0d725" />
+
+*Figure 9 - 7: Dashboard Alerts*
+
+<img width="623" height="475" alt="14" src="https://github.com/user-attachments/assets/eb725d96-c99e-4a33-b68e-e71c1ace8bce" />
+
+*Figure 10-14: Dashboard Alerts*
+
 During ingestion configuration:
 
-A JSON sample file (CiscoStealthwatch.json) was uploaded to define schema
-A transformation rule was implemented to normalize timestamps:
+- A JSON sample file (CiscoStealthwatch.json) was uploaded to define schema
+
+- A transformation rule was implemented to normalize timestamps:
 
 *| extend TimeGenerated = todatetime(EventTime)*
 (Figures 12, 14)
+
+<img width="1878" height="894" alt="12" src="https://github.com/user-attachments/assets/b751d8ff-ec00-40f7-adbe-4118c5aeded8" />
+
+*Figure 11-12: Normalizing timestamps*
 
 Initial ingestion errors highlighted a missing TimeGenerated field (Figure 11).
 This was resolved by mapping the existing EventTime field to TimeGenerated, ensuring compatibility with Sentinel’s time-based query engine (Figures 12–13).
@@ -84,9 +97,9 @@ ProcessName
 
 
 
-*Figure 5: Dashboard Alerts*
 
-*Figure 6: Dashboard Alerts*
+
+
 
 *Figure 7: Dashboard Alerts*
 
