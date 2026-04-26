@@ -130,7 +130,12 @@ source
 
 <img width="1910" height="898" alt="17 fixing time" src="https://github.com/user-attachments/assets/fd89eb88-dde6-4416-96af-ab4ad893d24b" />
 
-*Figure 15: Resolvingtimestamp fields*
+*Figure 15: Resolving timestamp field*
+
+This ensured:
+
+- Accurate historical timestamp representation
+- Proper alignment with Sentinel’s query and detection engine
 
 *Figure 7: Dashboard Alerts*
 
