@@ -44,7 +44,7 @@ The resource group confirms successful deployment of all required components:
 - Log Analytics Workspace
 - Microsoft Sentinel solution
 - Data Collection Rule
-- Data Collection Endpoint (Figure 8)
+- Data Collection Endpoint (Figure 6)
 
 <img width="1919" height="590" alt="18 both logs ingested Resource Group" src="https://github.com/user-attachments/assets/05d77b5c-5601-4733-8738-bfca75be5928" />
 
@@ -52,15 +52,15 @@ The resource group confirms successful deployment of all required components:
 
 **Cisco Stealthwatch Integration (CiscoStealthwatch_CL)**
 
-A custom table (CiscoStealthwatch_CL) was created to simulate ingestion of Cisco Stealthwatch network telemetry (Figures 7, 10, 14).
+A custom table (CiscoStealthwatch_CL) was created to simulate ingestion of Cisco Stealthwatch network telemetry (Figures 7-8).
 
 <img width="1886" height="895" alt="7" src="https://github.com/user-attachments/assets/e5effa28-5ac9-45c0-91ec-9700d5c0d725" />
 
-*Figure 9 - 7: Dashboard Alerts*
+*Figure 7: CiscoStealthwatch Custom Log*
 
 <img width="623" height="475" alt="14" src="https://github.com/user-attachments/assets/eb725d96-c99e-4a33-b68e-e71c1ace8bce" />
 
-*Figure 10-14: Dashboard Alerts*
+*Figure 8: CiscoStealthwatch_CL created*
 
 During ingestion configuration:
 
