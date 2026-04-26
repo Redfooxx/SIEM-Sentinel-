@@ -30,19 +30,15 @@ To simulate ingestion of external telemetry, a full Azure Monitor ingestion pipe
 - Data Collection Rule (DCR) (DCR-Cisco-Upload)
 - Custom Tables for structured log storage
   
-This architecture reflects a real-world ingestion pipeline used to onboard third-party data sources into Sentinel (Figures 8–10, 18).
-
-<img width="1324" height="684" alt="8 creating data collection end point" src="https://github.com/user-attachments/assets/bfdbec03-e651-45ca-b9ef-d7a6f44b8863" />
-
-*Figure 4-8: Dashboard Alerts*
+This architecture reflects a real-world ingestion pipeline used to onboard third-party data sources into Sentinel (Figures 4-6).
 
 <img width="852" height="886" alt="9" src="https://github.com/user-attachments/assets/c5720b35-daea-4f1d-9784-331c3611a32e" />
 
-*Figure 5-9: Dashboard Alerts*
+*Figure 4: Data Collection Endpoint*
 
 <img width="989" height="898" alt="10" src="https://github.com/user-attachments/assets/5e66becd-afc0-4e7f-a69b-6d4e565cbe1b" />
 
-*Figure 6-10: Dashboard Alerts*
+*Figure 5: Custom Table*
 
 The resource group confirms successful deployment of all required components:
 - Log Analytics Workspace
@@ -52,7 +48,7 @@ The resource group confirms successful deployment of all required components:
 
 <img width="1919" height="590" alt="18 both logs ingested Resource Group" src="https://github.com/user-attachments/assets/05d77b5c-5601-4733-8738-bfca75be5928" />
 
-*Figure 8-18: Resource Group Deployments*
+*Figure 6: Resource Group Deployments*
 
 **Cisco Stealthwatch Integration (CiscoStealthwatch_CL)**
 
