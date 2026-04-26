@@ -111,11 +111,11 @@ During ingestion:
 
 - A JSON dataset was uploaded
   
-- Sentinel generated a warning indicating no timestamp field was present (Figure 16)
+- Sentinel generated a warning indicating no timestamp field was present (Figure 14)
   
 <img width="1918" height="548" alt="16 ingesting windows logs time error" src="https://github.com/user-attachments/assets/68f54c05-c5cc-4f7c-9294-809727d83c6d" />
 
-*Figure 16: Ingesting windows logs time error*
+*Figure 14-16: Ingesting windows logs time error*
 
 To resolve this:
 
