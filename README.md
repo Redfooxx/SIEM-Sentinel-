@@ -137,9 +137,24 @@ This ensured:
 - Accurate historical timestamp representation
 - Proper alignment with Sentinel’s query and detection engine
 
-*Figure 7: Dashboard Alerts*
+**Ingestion Challenges and Validation**
 
-*Figure 8: Dashboard Alerts*
+Several real-world ingestion challenges were encountered and resolved, including:
+
+- Missing or improperly formatted timestamp fields
+- Schema conflicts with reserved field names
+- Data Collection Rules not initially connected to sources (Figure 19)
+- API-based ingestion requiring workspace authentication (Figure 20)
+  
+These issues were systematically debugged and corrected, demonstrating practical experience with Azure Monitor ingestion pipelines.
+
+<img width="1912" height="394" alt="19  data sources not connected" src="https://github.com/user-attachments/assets/d427dd9b-458f-40e1-b68e-c2e2114bacbc" />
+
+*Figure 16-19: Data sources not connected*
+
+<img width="1126" height="286" alt="20 shared key" src="https://github.com/user-attachments/assets/4129db27-80cf-4b15-82fa-9a242237a7d9" />
+
+*Figure 17-20: API-based ingestion*
 
 *Figure 9: Dashboard Alerts*
 
