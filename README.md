@@ -104,13 +104,18 @@ Final schema validation using KQL confirmed the table structure was correctly de
 
 *Figure 13 -21:  Validating schema using KQL*
 
-**Cisco Stealthwatch Integration (CiscoStealthwatch_CL)**
-A custom table (CiscoStealthwatch_CL) was created to simulate ingestion of Cisco Stealthwatch network telemetry (Figures 7, 10, 14).
+**Windows Security Event Integration (WindowsRegistry_CL)**
+A second custom table was created to simulate ingestion of Windows Security Event logs (Event ID 4663), representing file and registry access activity.
 
-During ingestion configuration:
+During ingestion:
 
-- A JSON sample file (CiscoStealthwatch.json) was uploaded to define schema
-- A transformation rule was implemented to normalize timestamps:
+- A JSON dataset was uploaded
+  
+-Sentinel generated a warning indicating no timestamp field was present (Figure 16)
+
+To resolve this:
+
+The timestamp field (TimeGenerated_UTC) was normalized using transformation logic:
 
 ```kusto
 source
