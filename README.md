@@ -95,11 +95,11 @@ Final schema validation using KQL confirmed the table structure was correctly de
 - HostIP / HostName
 - SeverityLevel
 - SyslogMessage
-- ProcessName
-(Figure13)
+- ProcessName (Figure13)
+  
 <img width="1919" height="815" alt="21 prrof" src="https://github.com/user-attachments/assets/a9b54921-dca6-4718-b95d-15361cdf47ee" />
 
-*Figure 13 -21:  Sentinel’s time-based query resolved*
+*Figure 13 -21:  Validating schema using KQL*
 
 
 
