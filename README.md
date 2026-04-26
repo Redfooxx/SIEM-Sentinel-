@@ -76,8 +76,11 @@ During ingestion configuration:
 
 - A transformation rule was implemented to normalize timestamps:
 
-  *| extend TimeGenerated = todatetime(EventTime)*
-  (Figures 11-12)
+```kusto
+source
+| extend TimeGenerated = todatetime(EventTime)
+```
+(Figures 11)
 
 <img width="1878" height="894" alt="12" src="https://github.com/user-attachments/assets/b751d8ff-ec00-40f7-adbe-4118c5aeded8" />
 
