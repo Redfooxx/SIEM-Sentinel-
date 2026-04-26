@@ -13,19 +13,19 @@ This deployment enabled:
 
   <img width="1362" height="669" alt="1" src="https://github.com/user-attachments/assets/baadb8bf-cc5c-437d-94f7-8bef5ef30d7a" />
   
-  *Figure 1: Dashboard Alerts*
+  *Figure 1-1: Dashboard Alerts*
   
   <img width="1908" height="685" alt="2" src="https://github.com/user-attachments/assets/e517df6a-75dc-4bf4-95b7-fcfd18dfc4ab" />
 
-  *Figure 2: Dashboard Alerts*
+  *Figure 2-2: Dashboard Alerts*
 
    <img width="1317" height="431" alt="3" src="https://github.com/user-attachments/assets/75e9c92c-a456-40dd-a42c-b69ace2e1654" />
 
-  *Figure 3: Dashboard Alerts*
+  *Figure 3-3: Dashboard Alerts*
 
   <img width="1917" height="681" alt="5" src="https://github.com/user-attachments/assets/af742b46-46dc-4f04-9a1f-aa769c2e3263" />
 
-  *Figure 4: Dashboard Alerts*
+  *Figure 4-5: Dashboard Alerts*
 
 **Custom Log Ingestion Architecture**
 
@@ -38,25 +38,25 @@ This architecture reflects a real-world ingestion pipeline used to onboard third
 
 <img width="1324" height="684" alt="8 creating data collection end point" src="https://github.com/user-attachments/assets/bfdbec03-e651-45ca-b9ef-d7a6f44b8863" />
 
-*Figure 5: Dashboard Alerts*
+*Figure 5-8: Dashboard Alerts*
 
 <img width="852" height="886" alt="9" src="https://github.com/user-attachments/assets/c5720b35-daea-4f1d-9784-331c3611a32e" />
 
-*Figure 6: Dashboard Alerts*
+*Figure 6-9: Dashboard Alerts*
 
 <img width="989" height="898" alt="10" src="https://github.com/user-attachments/assets/5e66becd-afc0-4e7f-a69b-6d4e565cbe1b" />
 
-*Figure 7: Dashboard Alerts*
-
-<img width="1919" height="590" alt="18 both logs ingested Resource Group" src="https://github.com/user-attachments/assets/05d77b5c-5601-4733-8738-bfca75be5928" />
-
-*Figure 8: Dashboard Alerts*
+*Figure 7-10: Dashboard Alerts*
 
 The resource group confirms successful deployment of all required components:
 - Log Analytics Workspace
 - Microsoft Sentinel solution
 - Data Collection Rule
-- Data Collection Endpoint (Figure 18)
+- Data Collection Endpoint (Figure 8)
+
+<img width="1919" height="590" alt="18 both logs ingested Resource Group" src="https://github.com/user-attachments/assets/05d77b5c-5601-4733-8738-bfca75be5928" />
+
+*Figure 8-18: Resource Group Deployments*
 
 **Cisco Stealthwatch Integration (CiscoStealthwatch_CL)**
 
@@ -76,25 +76,30 @@ During ingestion configuration:
 
 - A transformation rule was implemented to normalize timestamps:
 
-*| extend TimeGenerated = todatetime(EventTime)*
-(Figures 12, 14)
+  *| extend TimeGenerated = todatetime(EventTime)*
+  (Figures 11-12)
 
 <img width="1878" height="894" alt="12" src="https://github.com/user-attachments/assets/b751d8ff-ec00-40f7-adbe-4118c5aeded8" />
 
 *Figure 11-12: Normalizing timestamps*
 
-Initial ingestion errors highlighted a missing TimeGenerated field (Figure 11).
-This was resolved by mapping the existing EventTime field to TimeGenerated, ensuring compatibility with Sentinel’s time-based query engine (Figures 12–13).
+Initial ingestion errors highlighted a missing TimeGenerated field. This was resolved by mapping the existing EventTime field to TimeGenerated, ensuring compatibility with Sentinel’s time-based query engine (Figures 12).
 
-Final schema validation using KQL confirmed the table structure was correctly defined, including fields such as:
+<img width="1917" height="434" alt="13 time repaired" src="https://github.com/user-attachments/assets/811fee7b-d305-40b6-a726-acd416c7f4cd" />
 
-EventTime
-HostIP / HostName
-SeverityLevel
-SyslogMessage
-ProcessName
-(Figure 21)
+*Figure 12 - 13:  Sentinel’s time-based query resolved*
 
+Final schema validation using KQL confirmed the table structure was correctly defined, including fields such as: 
+
+- EventTime
+- HostIP / HostName
+- SeverityLevel
+- SyslogMessage
+- ProcessName
+(Figure13)
+<img width="1919" height="815" alt="21 prrof" src="https://github.com/user-attachments/assets/a9b54921-dca6-4718-b95d-15361cdf47ee" />
+
+*Figure 13 -21:  Sentinel’s time-based query resolved*
 
 
 
