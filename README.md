@@ -156,14 +156,41 @@ These issues were systematically debugged and corrected, demonstrating practical
 
 *Figure 17-20: API-based ingestion*
 
-*Figure 9: Dashboard Alerts*
+**Schema Validation and Detection Readiness**
 
-*Figure 10: Dashboard Alerts*
+Although continuous data streaming was not established (due to lack of a live data source), both custom tables were successfully:
 
-*Figure 11: Dashboard Alerts*
+- Created and deployed
+- Parsed and normalized
+- Validated using KQL (getschema)
+  
+This confirms the environment is fully prepared for real-time ingestion and detection engineering.
 
-*Figure 12: Dashboard Alerts*
+Example validation query:
 
-*Figure 13: Dashboard Alerts*
+```kusto
+CiscoStealthwatch_CL
+| getschema
+```
+(Figure 18)
 
-*Figure 14: Dashboard Alerts*
+<img width="1919" height="815" alt="21 prrof" src="https://github.com/user-attachments/assets/0aaac1e7-8dae-4bde-9452-40457908d341" />
+
+*Figure 18-21: CiscoStealthwatch_CL Schema*
+
+**Summary**
+
+The Sentinel environment successfully replicates a production-style SIEM ingestion pipeline by:
+
+- Deploying core Sentinel infrastructure
+- Building custom ingestion pipelines (DCR + DCE)
+- Normalizing and parsing external log formats
+- Validating schema for detection use
+  
+This demonstrates hands-on experience with:
+
+- Azure Sentinel architecture
+- Log ingestion engineering
+- KQL-based data normalization
+- Troubleshooting real-world SIEM ingestion issues
+
