@@ -126,7 +126,11 @@ source
 | extend TimeGenerated = todatetime(TimeGenerated_UTC)
 | project-away TimeGenerated_UTC
 ```
+(Figure 15-17)
 
+<img width="1910" height="898" alt="17 fixing time" src="https://github.com/user-attachments/assets/fd89eb88-dde6-4416-96af-ab4ad893d24b" />
+
+*Figure 15: Resolvingtimestamp fields*
 
 *Figure 7: Dashboard Alerts*
 
