@@ -13,15 +13,15 @@ This deployment enabled:
 
   <img width="1362" height="669" alt="1" src="https://github.com/user-attachments/assets/baadb8bf-cc5c-437d-94f7-8bef5ef30d7a" />
   
-  *Figure 1-1: Log Analytics workspace*
+  *Figure 1: Log Analytics workspace*
   
   <img width="1317" height="431" alt="3" src="https://github.com/user-attachments/assets/75e9c92c-a456-40dd-a42c-b69ace2e1654" />
 
-  *Figure 2-3: Cyber-Sentinel-Workspace Deployment*
+  *Figure 2: Cyber-Sentinel-Workspace Deployment*
 
   <img width="1917" height="681" alt="5" src="https://github.com/user-attachments/assets/407bbee6-b855-460c-a111-d4ac76a6a6c1" />
 
-  *Figure 3-5: Deployment complete*
+  *Figure 3: Deployment complete*
 
 **Custom Log Ingestion Architecture**
 
@@ -34,15 +34,15 @@ This architecture reflects a real-world ingestion pipeline used to onboard third
 
 <img width="1324" height="684" alt="8 creating data collection end point" src="https://github.com/user-attachments/assets/bfdbec03-e651-45ca-b9ef-d7a6f44b8863" />
 
-*Figure 5-8: Dashboard Alerts*
+*Figure 4-8: Dashboard Alerts*
 
 <img width="852" height="886" alt="9" src="https://github.com/user-attachments/assets/c5720b35-daea-4f1d-9784-331c3611a32e" />
 
-*Figure 6-9: Dashboard Alerts*
+*Figure 5-9: Dashboard Alerts*
 
 <img width="989" height="898" alt="10" src="https://github.com/user-attachments/assets/5e66becd-afc0-4e7f-a69b-6d4e565cbe1b" />
 
-*Figure 7-10: Dashboard Alerts*
+*Figure 6-10: Dashboard Alerts*
 
 The resource group confirms successful deployment of all required components:
 - Log Analytics Workspace
