@@ -101,9 +101,19 @@ Final schema validation using KQL confirmed the table structure was correctly de
 
 *Figure 13 -21:  Validating schema using KQL*
 
+**Cisco Stealthwatch Integration (CiscoStealthwatch_CL)**
+A custom table (CiscoStealthwatch_CL) was created to simulate ingestion of Cisco Stealthwatch network telemetry (Figures 7, 10, 14).
 
+During ingestion configuration:
 
+- A JSON sample file (CiscoStealthwatch.json) was uploaded to define schema
+- A transformation rule was implemented to normalize timestamps:
 
+```kusto
+source
+| extend TimeGenerated = todatetime(TimeGenerated_UTC)
+| project-away TimeGenerated_UTC
+```
 
 
 *Figure 7: Dashboard Alerts*
