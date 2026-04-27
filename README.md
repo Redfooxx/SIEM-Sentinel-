@@ -73,11 +73,11 @@ During ingestion configuration:
 source
 | extend TimeGenerated = todatetime(EventTime)
 ```
-(Figures 11)
+(Figures 9)
 
   <img width="1878" height="894" alt="12" src="https://github.com/user-attachments/assets/b751d8ff-ec00-40f7-adbe-4118c5aeded8" />
 
-  *Figure 11-12: Normalizing timestamps*
+  *Figure 9-12: Normalizing timestamps*
 
 Initial ingestion errors highlighted a missing TimeGenerated field. This was resolved by mapping the existing EventTime field to TimeGenerated, ensuring compatibility with Sentinel’s time-based query engine (Figures 12).
 
