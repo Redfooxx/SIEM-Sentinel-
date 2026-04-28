@@ -83,7 +83,7 @@ Initial ingestion errors highlighted a missing TimeGenerated field. This was res
 
   <img width="1917" height="434" alt="13 time repaired" src="https://github.com/user-attachments/assets/811fee7b-d305-40b6-a726-acd416c7f4cd" />
 
-  *Figure 12 - 13:  Sentinel’s time-based query resolved*
+  *Figure 10 - 13:  Sentinel’s time-based query resolved*
 
 Final schema validation using KQL confirmed the table structure was correctly defined, including fields such as: 
 
