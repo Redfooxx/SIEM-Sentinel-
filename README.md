@@ -91,24 +91,25 @@ Final schema validation using KQL confirmed the table structure was correctly de
 - HostIP / HostName
 - SeverityLevel
 - SyslogMessage
-- ProcessName (Figure13)
+- ProcessName (Figure 11)
   
   <img width="1919" height="815" alt="21 prrof" src="https://github.com/user-attachments/assets/a9b54921-dca6-4718-b95d-15361cdf47ee" />
 
-  *Figure 13 -21:  Validating schema using KQL*
+  *Figure 11 -21:  Validating schema using KQL*
 
 **Windows Security Event Integration (WindowsRegistry_CL)**
+
 A second custom table was created to simulate ingestion of Windows Security Event logs (Event ID 4663), representing file and registry access activity.
 
 During ingestion:
 
 - A JSON dataset was uploaded
   
-- Sentinel generated a warning indicating no timestamp field was present (Figure 14)
+- Sentinel generated a warning indicating no timestamp field was present (Figure 12)
   
   <img width="1918" height="548" alt="16 ingesting windows logs time error" src="https://github.com/user-attachments/assets/68f54c05-c5cc-4f7c-9294-809727d83c6d" />
 
-  *Figure 14-16: Ingesting windows logs time error*
+  *Figure 12-16: Ingesting windows logs time error*
 
 To resolve this:
 
@@ -119,11 +120,11 @@ source
 | extend TimeGenerated = todatetime(TimeGenerated_UTC)
 | project-away TimeGenerated_UTC
 ```
-(Figure 15-17)
+(Figure 13-17)
 
   <img width="1910" height="898" alt="17 fixing time" src="https://github.com/user-attachments/assets/fd89eb88-dde6-4416-96af-ab4ad893d24b" />
 
-  *Figure 15: Resolving timestamp field*
+  *Figure 13: Resolving timestamp field*
 
 This ensured:
 
